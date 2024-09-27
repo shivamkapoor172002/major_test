@@ -1,0 +1,118 @@
+:root {
+    --primary-color: #f44336;
+    --secondary-color: #f0f0f0;
+    --text-color: #333;
+    --accent-color: #4caf50;
+    --border-color: #ccc;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+.left-panel {
+    width: 30%;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left-panel h2 {
+    margin-bottom: 20px;
+}
+
+.connection-area, .message-area {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="file"] {
+    width: calc(100% - 10px);
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.right-panel {
+    width: 70%;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: white;
+}
+
+.right-panel h2 {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+#log {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+/* Add this to your existing CSS file or create a new one */
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.notification.show {
+    opacity: 1;
+}
+#imageContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#imageContainer img {
+    max-width: 150px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+#imageContainer img:hover {
+    transform: scale(1.05);
+}

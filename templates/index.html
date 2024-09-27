@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC Connection with Gesture Recognition</title>
+    <script src="https://unpkg.com/simple-peer@9.11.0/simplepeer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left-panel">
+            <div class="connection-area">
+                <h2>Connect</h2>
+                <button id="createOffer">Create New Session</button>
+                <input id="sessionId" placeholder="Session ID" />
+                <button id="joinSession">Join Session</button>
+            </div>
+
+            <div class="message-area">
+                <h2>Messaging</h2>
+                <input id="message" placeholder="Type a message" />
+                <button id="sendMessage" disabled>Send Message</button>
+            </div>
+
+            <div class="gesture-area">
+                <h2>Gesture Recognition</h2>
+                <p>Show 'O' gesture to take a screenshot</p>
+                <p>Show 'V' gesture to request the latest screenshot</p>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <h2>Logs</h2>
+            <pre id="log"></pre>
+
+            <h2>Latest Screenshot</h2>
+            <img id="latestScreenshot" src="" alt="Latest Screenshot" style="max-width: 100%; border: 1px solid #ccc;">
+        </div>
+    </div>
+    <div id="notification" class="notification"></div>
+
+
+    <script type="module" src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
