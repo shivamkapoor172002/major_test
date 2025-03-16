@@ -1,7 +1,7 @@
 # Gesture Recognition Application
 
 This project implements a peer-to-peer gesture recognition communication system using Flask, WebRTC, and Firebase. Users can send and receive gestures, enabling interactive experiences.
-![Uploading Untitled-2024-12-20-1554.png…]()
+![Untitled-2024-12-20-1554](https://github.com/user-attachments/assets/bb976c17-ae6c-485c-af07-9d69431549a8)
 
 ## Table of Contents
 - [Requirements](#requirements)
